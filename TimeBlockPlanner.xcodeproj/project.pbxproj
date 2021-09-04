@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD127FD126E423EF001B3337 /* TimeBlockPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD127FD026E423EF001B3337 /* TimeBlockPlannerApp.swift */; };
+		CD127FD326E423F0001B3337 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD127FD226E423F0001B3337 /* ContentView.swift */; };
+		CD127FD526E423F1001B3337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD127FD426E423F1001B3337 /* Assets.xcassets */; };
+		CD127FD826E423F1001B3337 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD127FD726E423F1001B3337 /* Preview Assets.xcassets */; };
+		CD127FE426E423F1001B3337 /* TimeBlockPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD127FE326E423F1001B3337 /* TimeBlockPlannerTests.swift */; };
+		CD127FEF26E423F1001B3337 /* TimeBlockPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD127FEE26E423F1001B3337 /* TimeBlockPlannerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD127FE026E423F1001B3337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD127FC526E423EF001B3337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD127FCC26E423EF001B3337;
+			remoteInfo = TimeBlockPlanner;
+		};
+		CD127FEB26E423F1001B3337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD127FC526E423EF001B3337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD127FCC26E423EF001B3337;
+			remoteInfo = TimeBlockPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD127FCD26E423EF001B3337 /* TimeBlockPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeBlockPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD127FD026E423EF001B3337 /* TimeBlockPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBlockPlannerApp.swift; sourceTree = "<group>"; };
+		CD127FD226E423F0001B3337 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD127FD426E423F1001B3337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD127FD726E423F1001B3337 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD127FD926E423F1001B3337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD127FDA26E423F1001B3337 /* TimeBlockPlanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeBlockPlanner.entitlements; sourceTree = "<group>"; };
+		CD127FDF26E423F1001B3337 /* TimeBlockPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeBlockPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD127FE326E423F1001B3337 /* TimeBlockPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBlockPlannerTests.swift; sourceTree = "<group>"; };
+		CD127FE526E423F1001B3337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD127FEA26E423F1001B3337 /* TimeBlockPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeBlockPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD127FEE26E423F1001B3337 /* TimeBlockPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBlockPlannerUITests.swift; sourceTree = "<group>"; };
+		CD127FF026E423F1001B3337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD127FCA26E423EF001B3337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD127FDC26E423F1001B3337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD127FE726E423F1001B3337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD127FC426E423EF001B3337 = {
+			isa = PBXGroup;
+			children = (
+				CD127FCF26E423EF001B3337 /* TimeBlockPlanner */,
+				CD127FE226E423F1001B3337 /* TimeBlockPlannerTests */,
+				CD127FED26E423F1001B3337 /* TimeBlockPlannerUITests */,
+				CD127FCE26E423EF001B3337 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD127FCE26E423EF001B3337 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD127FCD26E423EF001B3337 /* TimeBlockPlanner.app */,
+				CD127FDF26E423F1001B3337 /* TimeBlockPlannerTests.xctest */,
+				CD127FEA26E423F1001B3337 /* TimeBlockPlannerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD127FCF26E423EF001B3337 /* TimeBlockPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				CD127FD026E423EF001B3337 /* TimeBlockPlannerApp.swift */,
+				CD127FD226E423F0001B3337 /* ContentView.swift */,
+				CD127FD426E423F1001B3337 /* Assets.xcassets */,
+				CD127FD926E423F1001B3337 /* Info.plist */,
+				CD127FDA26E423F1001B3337 /* TimeBlockPlanner.entitlements */,
+				CD127FD626E423F1001B3337 /* Preview Content */,
+			);
+			path = TimeBlockPlanner;
+			sourceTree = "<group>";
+		};
+		CD127FD626E423F1001B3337 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CD127FD726E423F1001B3337 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD127FE226E423F1001B3337 /* TimeBlockPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD127FE326E423F1001B3337 /* TimeBlockPlannerTests.swift */,
+				CD127FE526E423F1001B3337 /* Info.plist */,
+			);
+			path = TimeBlockPlannerTests;
+			sourceTree = "<group>";
+		};
+		CD127FED26E423F1001B3337 /* TimeBlockPlannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD127FEE26E423F1001B3337 /* TimeBlockPlannerUITests.swift */,
+				CD127FF026E423F1001B3337 /* Info.plist */,
+			);
+			path = TimeBlockPlannerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD127FCC26E423EF001B3337 /* TimeBlockPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD127FF326E423F1001B3337 /* Build configuration list for PBXNativeTarget "TimeBlockPlanner" */;
+			buildPhases = (
+				CD127FC926E423EF001B3337 /* Sources */,
+				CD127FCA26E423EF001B3337 /* Frameworks */,
+				CD127FCB26E423EF001B3337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeBlockPlanner;
+			productName = TimeBlockPlanner;
+			productReference = CD127FCD26E423EF001B3337 /* TimeBlockPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD127FDE26E423F1001B3337 /* TimeBlockPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD127FF626E423F1001B3337 /* Build configuration list for PBXNativeTarget "TimeBlockPlannerTests" */;
+			buildPhases = (
+				CD127FDB26E423F1001B3337 /* Sources */,
+				CD127FDC26E423F1001B3337 /* Frameworks */,
+				CD127FDD26E423F1001B3337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD127FE126E423F1001B3337 /* PBXTargetDependency */,
+			);
+			name = TimeBlockPlannerTests;
+			productName = TimeBlockPlannerTests;
+			productReference = CD127FDF26E423F1001B3337 /* TimeBlockPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD127FE926E423F1001B3337 /* TimeBlockPlannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD127FF926E423F1001B3337 /* Build configuration list for PBXNativeTarget "TimeBlockPlannerUITests" */;
+			buildPhases = (
+				CD127FE626E423F1001B3337 /* Sources */,
+				CD127FE726E423F1001B3337 /* Frameworks */,
+				CD127FE826E423F1001B3337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD127FEC26E423F1001B3337 /* PBXTargetDependency */,
+			);
+			name = TimeBlockPlannerUITests;
+			productName = TimeBlockPlannerUITests;
+			productReference = CD127FEA26E423F1001B3337 /* TimeBlockPlannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD127FC526E423EF001B3337 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					CD127FCC26E423EF001B3337 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					CD127FDE26E423F1001B3337 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CD127FCC26E423EF001B3337;
+					};
+					CD127FE926E423F1001B3337 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CD127FCC26E423EF001B3337;
+					};
+				};
+			};
+			buildConfigurationList = CD127FC826E423EF001B3337 /* Build configuration list for PBXProject "TimeBlockPlanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD127FC426E423EF001B3337;
+			productRefGroup = CD127FCE26E423EF001B3337 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD127FCC26E423EF001B3337 /* TimeBlockPlanner */,
+				CD127FDE26E423F1001B3337 /* TimeBlockPlannerTests */,
+				CD127FE926E423F1001B3337 /* TimeBlockPlannerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD127FCB26E423EF001B3337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD127FD826E423F1001B3337 /* Preview Assets.xcassets in Resources */,
+				CD127FD526E423F1001B3337 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD127FDD26E423F1001B3337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD127FE826E423F1001B3337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD127FC926E423EF001B3337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD127FD326E423F0001B3337 /* ContentView.swift in Sources */,
+				CD127FD126E423EF001B3337 /* TimeBlockPlannerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD127FDB26E423F1001B3337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD127FE426E423F1001B3337 /* TimeBlockPlannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD127FE626E423F1001B3337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD127FEF26E423F1001B3337 /* TimeBlockPlannerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD127FE126E423F1001B3337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD127FCC26E423EF001B3337 /* TimeBlockPlanner */;
+			targetProxy = CD127FE026E423F1001B3337 /* PBXContainerItemProxy */;
+		};
+		CD127FEC26E423F1001B3337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD127FCC26E423EF001B3337 /* TimeBlockPlanner */;
+			targetProxy = CD127FEB26E423F1001B3337 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CD127FF126E423F1001B3337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD127FF226E423F1001B3337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CD127FF426E423F1001B3337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimeBlockPlanner/TimeBlockPlanner.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"TimeBlockPlanner/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TimeBlockPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zvbchenko.TimeBlockPlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CD127FF526E423F1001B3337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimeBlockPlanner/TimeBlockPlanner.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"TimeBlockPlanner/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TimeBlockPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zvbchenko.TimeBlockPlanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CD127FF726E423F1001B3337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TimeBlockPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zvbchenko.TimeBlockPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeBlockPlanner.app/Contents/MacOS/TimeBlockPlanner";
+			};
+			name = Debug;
+		};
+		CD127FF826E423F1001B3337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TimeBlockPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zvbchenko.TimeBlockPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeBlockPlanner.app/Contents/MacOS/TimeBlockPlanner";
+			};
+			name = Release;
+		};
+		CD127FFA26E423F1001B3337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TimeBlockPlannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zvbchenko.TimeBlockPlannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TimeBlockPlanner;
+			};
+			name = Debug;
+		};
+		CD127FFB26E423F1001B3337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TimeBlockPlannerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zvbchenko.TimeBlockPlannerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TimeBlockPlanner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD127FC826E423EF001B3337 /* Build configuration list for PBXProject "TimeBlockPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD127FF126E423F1001B3337 /* Debug */,
+				CD127FF226E423F1001B3337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD127FF326E423F1001B3337 /* Build configuration list for PBXNativeTarget "TimeBlockPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD127FF426E423F1001B3337 /* Debug */,
+				CD127FF526E423F1001B3337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD127FF626E423F1001B3337 /* Build configuration list for PBXNativeTarget "TimeBlockPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD127FF726E423F1001B3337 /* Debug */,
+				CD127FF826E423F1001B3337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD127FF926E423F1001B3337 /* Build configuration list for PBXNativeTarget "TimeBlockPlannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD127FFA26E423F1001B3337 /* Debug */,
+				CD127FFB26E423F1001B3337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD127FC526E423EF001B3337 /* Project object */;
+}
