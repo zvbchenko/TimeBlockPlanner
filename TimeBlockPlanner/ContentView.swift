@@ -9,8 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ProjectListView()
+            MainView()
+            ScheduleView()
+            
+        }
+    }
+}
+
+struct ScheduleView: View{
+    var body:some View{
+        Text("schedule")
+    }
+}
+struct MainView: View{
+    var body:some View{
+        Text("project description/Todo tasks")
+    }
+}
+
+struct ProjectListView: View{
+    var body:some View{
+        Text("projectlist")
     }
 }
 
