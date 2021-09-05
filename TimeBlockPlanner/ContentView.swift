@@ -8,49 +8,39 @@
 import SwiftUI
 
 
+
 struct ContentView: View {
-    @State private var showSchedule = true
+    
+    @State private var showSchedule = false
     var body: some View {
         
-            
-            if showSchedule {
-                NavigationView {
-                    ProjectListView()
-                    MainView()
+        NavigationView {
+            ProjectListView()
+            HStack{
+                MainView()
+                if showSchedule{
+                    Divider()
                     ScheduleView()
-                }.toolbar {
-                    ToolbarItem(placement: .navigation) {
-                        Button(action: toggleSidebar, label: {
-                            Image(systemName: "sidebar.leading")
-                        })
-                    }
-                    ToolbarItem(placement: .primaryAction) {
-                        Button(action: {showSchedule.toggle()}, label: {
-                            Image(systemName: "sidebar.trailing")
-                        })
-                    }
                 }
-            }else{
-                NavigationView {
-                    ProjectListView()
-                    MainView()
-                }.toolbar {
-                    ToolbarItem(placement: .navigation) {
-                        Button(action: toggleSidebar, label: {
-                            Image(systemName: "sidebar.leading")
-                        })
-                    }
-                    ToolbarItem(placement: .primaryAction) {
-                        Button(action: {showSchedule.toggle()}, label: {
-                            Image(systemName: "sidebar.trailing")
-                        })
-                    }
-                }
-            
+                            
             }
             
+        }.toolbar {
+            ToolbarItem(placement: .navigation) {
+                Button(action: toggleSidebar, label: {
+                    Image(systemName: "sidebar.leading")
+                })
+            }
+            ToolbarItem(placement: .primaryAction) {
+                Button(action: {withAnimation {showSchedule.toggle()}}, label: {
+                    Image(systemName: "sidebar.trailing")
+                })
+            }
+
         }
     }
+}
+
 
 private func toggleSidebar() {
        #if os(iOS)
@@ -58,11 +48,7 @@ private func toggleSidebar() {
        NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
        #endif
 }
-private func toggleSchedule() {
-       #if os(iOS)
-       #else
-       #endif
-}
+
 
 
 struct ScheduleView: View{
