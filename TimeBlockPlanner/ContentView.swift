@@ -31,7 +31,18 @@ struct MainView: View{
 
 struct ProjectListView: View{
     var body:some View{
-        Text("projectlist")
+        VStack(alignment: .leading,
+               spacing: 10){
+            Text("projectlist").padding()
+            Divider()
+            ForEach(
+                        1...5,
+                        id: \.self
+                    ) {
+                        Text("Item \($0)")
+            }
+               }.padding().offset(y:-100)
+        
     }
 }
 
