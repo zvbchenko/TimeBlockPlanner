@@ -7,30 +7,63 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        NavigationView {
-            
-            ProjectListView()
-            MainView()
-            ScheduleView()
 
+struct ContentView: View {
+    @State private var showSchedule = true
+    var body: some View {
+        
             
-        }.toolbar {
-            ToolbarItem(placement: .navigation) {
-                Button(action: toggleSidebar, label: {
-                    Image(systemName: "sidebar.leading")
-                })
+            if showSchedule {
+                NavigationView {
+                    ProjectListView()
+                    MainView()
+                    ScheduleView()
+                }.toolbar {
+                    ToolbarItem(placement: .navigation) {
+                        Button(action: toggleSidebar, label: {
+                            Image(systemName: "sidebar.leading")
+                        })
+                    }
+                    ToolbarItem(placement: .primaryAction) {
+                        Button(action: {showSchedule.toggle()}, label: {
+                            Image(systemName: "sidebar.trailing")
+                        })
+                    }
+                }
+            }else{
+                NavigationView {
+                    ProjectListView()
+                    MainView()
+                }.toolbar {
+                    ToolbarItem(placement: .navigation) {
+                        Button(action: toggleSidebar, label: {
+                            Image(systemName: "sidebar.leading")
+                        })
+                    }
+                    ToolbarItem(placement: .primaryAction) {
+                        Button(action: {showSchedule.toggle()}, label: {
+                            Image(systemName: "sidebar.trailing")
+                        })
+                    }
+                }
+            
             }
+            
         }
     }
-}
+
 private func toggleSidebar() {
        #if os(iOS)
        #else
        NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
        #endif
 }
+private func toggleSchedule() {
+       #if os(iOS)
+       #else
+       #endif
+}
+
 
 struct ScheduleView: View{
     var body:some View{
