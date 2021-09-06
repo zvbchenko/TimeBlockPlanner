@@ -13,6 +13,7 @@
 		CD127FD826E423F1001B3337 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD127FD726E423F1001B3337 /* Preview Assets.xcassets */; };
 		CD127FE426E423F1001B3337 /* TimeBlockPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD127FE326E423F1001B3337 /* TimeBlockPlannerTests.swift */; };
 		CD127FEF26E423F1001B3337 /* TimeBlockPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD127FEE26E423F1001B3337 /* TimeBlockPlannerUITests.swift */; };
+		CD127FFD26E58145001B3337 /* ProjectTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD127FFC26E58145001B3337 /* ProjectTemplate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		CD127FEA26E423F1001B3337 /* TimeBlockPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeBlockPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD127FEE26E423F1001B3337 /* TimeBlockPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBlockPlannerUITests.swift; sourceTree = "<group>"; };
 		CD127FF026E423F1001B3337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD127FFC26E58145001B3337 /* ProjectTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTemplate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				CD127FD026E423EF001B3337 /* TimeBlockPlannerApp.swift */,
 				CD127FD226E423F0001B3337 /* ContentView.swift */,
+				CD127FFC26E58145001B3337 /* ProjectTemplate.swift */,
 				CD127FD426E423F1001B3337 /* Assets.xcassets */,
 				CD127FD926E423F1001B3337 /* Info.plist */,
 				CD127FDA26E423F1001B3337 /* TimeBlockPlanner.entitlements */,
@@ -263,6 +266,7 @@
 			files = (
 				CD127FD326E423F0001B3337 /* ContentView.swift in Sources */,
 				CD127FD126E423EF001B3337 /* TimeBlockPlannerApp.swift in Sources */,
+				CD127FFD26E58145001B3337 /* ProjectTemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -58,7 +58,8 @@ struct ScheduleView: View{
 }
 struct MainView: View{
     var body:some View{
-        Text("project description/Todo tasks")
+        //Text("project description/Todo tasks")
+        EmptyProject()
     }
 }
 
