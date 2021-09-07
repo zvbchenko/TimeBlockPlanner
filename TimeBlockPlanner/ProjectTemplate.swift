@@ -25,11 +25,14 @@ struct EmptyProject: View {
                      selection: $dueDate,
                      in: dateRange,
                      displayedComponents: [.date, .hourAndMinute]
-            ).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            ).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
                 
             Text("Project Plan")
             
-        }
+            
+            Spacer() // Has to be last
+            
+        }.frame( alignment: .top)
             
             
             

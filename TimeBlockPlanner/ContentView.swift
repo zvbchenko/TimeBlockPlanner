@@ -14,11 +14,11 @@ struct ContentView: View {
     @State private var showSchedule = false
     var body: some View {
         
-        NavigationView {
+        NavigationView{
             
             ProjectListView()
             HStack{
-                MainView()
+                MainView().offset(y: 120)
                 if showSchedule{
                     Divider()
                     ScheduleView().frame(minWidth: 50, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
@@ -26,7 +26,7 @@ struct ContentView: View {
                             
             }.multilineTextAlignment(.center)
             
-        }.toolbar {
+        }.frame(minWidth: 600, maxWidth: .infinity, minHeight: 400, maxHeight: .infinity).toolbar{
             ToolbarItem(placement: .navigation) {
                 Button(action: toggleSidebar, label: {
                     Image(systemName: "sidebar.leading")
@@ -38,7 +38,7 @@ struct ContentView: View {
                 })
             }
 
-        }.frame(minWidth: 200, maxWidth: .infinity, minHeight: 400, maxHeight: .infinity)
+        }
         
     }
 }
@@ -67,7 +67,7 @@ struct MainView: View{
 
 struct ProjectListView: View{
     var body:some View{
-        VStack(alignment: .leading,
+        VStack(alignment: .center,
                spacing: 10){
             
             Text("projectlist").padding()
@@ -77,7 +77,8 @@ struct ProjectListView: View{
                     ) {
                         Text("Item \($0)")
             }
-               }.padding().offset(y:-100)
+            Spacer()
+               }.padding().offset(y:-10)
         
     }
 }
