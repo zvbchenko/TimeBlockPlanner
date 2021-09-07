@@ -15,15 +15,16 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
+            
             ProjectListView()
             HStack{
                 MainView()
                 if showSchedule{
                     Divider()
-                    ScheduleView()
+                    ScheduleView().frame(minWidth: 50, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                 }
                             
-            }
+            }.multilineTextAlignment(.center)
             
         }.toolbar {
             ToolbarItem(placement: .navigation) {
@@ -37,7 +38,8 @@ struct ContentView: View {
                 })
             }
 
-        }
+        }.frame(minWidth: 200, maxWidth: .infinity, minHeight: 400, maxHeight: .infinity)
+        
     }
 }
 
@@ -59,7 +61,7 @@ struct ScheduleView: View{
 struct MainView: View{
     var body:some View{
         //Text("project description/Todo tasks")
-        EmptyProject()
+        EmptyProject().padding().offset(y:-100)
     }
 }
 
@@ -67,6 +69,7 @@ struct ProjectListView: View{
     var body:some View{
         VStack(alignment: .leading,
                spacing: 10){
+            
             Text("projectlist").padding()
             Divider()
             ForEach(1...5,
