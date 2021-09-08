@@ -14,6 +14,7 @@
 		CD127FE426E423F1001B3337 /* TimeBlockPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD127FE326E423F1001B3337 /* TimeBlockPlannerTests.swift */; };
 		CD127FEF26E423F1001B3337 /* TimeBlockPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD127FEE26E423F1001B3337 /* TimeBlockPlannerUITests.swift */; };
 		CD127FFD26E58145001B3337 /* ProjectTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD127FFC26E58145001B3337 /* ProjectTemplate.swift */; };
+		CD127FFF26E836CB001B3337 /* Subtask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD127FFE26E836CB001B3337 /* Subtask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		CD127FEE26E423F1001B3337 /* TimeBlockPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBlockPlannerUITests.swift; sourceTree = "<group>"; };
 		CD127FF026E423F1001B3337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD127FFC26E58145001B3337 /* ProjectTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTemplate.swift; sourceTree = "<group>"; };
+		CD127FFE26E836CB001B3337 /* Subtask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				CD127FD026E423EF001B3337 /* TimeBlockPlannerApp.swift */,
 				CD127FD226E423F0001B3337 /* ContentView.swift */,
 				CD127FFC26E58145001B3337 /* ProjectTemplate.swift */,
+				CD127FFE26E836CB001B3337 /* Subtask.swift */,
 				CD127FD426E423F1001B3337 /* Assets.xcassets */,
 				CD127FD926E423F1001B3337 /* Info.plist */,
 				CD127FDA26E423F1001B3337 /* TimeBlockPlanner.entitlements */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD127FD326E423F0001B3337 /* ContentView.swift in Sources */,
+				CD127FFF26E836CB001B3337 /* Subtask.swift in Sources */,
 				CD127FD126E423EF001B3337 /* TimeBlockPlannerApp.swift in Sources */,
 				CD127FFD26E58145001B3337 /* ProjectTemplate.swift in Sources */,
 			);

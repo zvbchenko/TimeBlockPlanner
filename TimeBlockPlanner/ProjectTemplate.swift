@@ -26,9 +26,13 @@ struct EmptyProject: View {
                      in: dateRange,
                      displayedComponents: [.date, .hourAndMinute]
             ).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                
-            Text("Project Plan")
             
+            
+            Text("Describe a subtask")
+            Subtask().textFieldStyle(PlainTextFieldStyle()).font(Font.system(size: 10, design: .default))
+                
+            Text("Project Plan:")
+            Text("List of subtasks")
             
             Spacer() // Has to be last
             
