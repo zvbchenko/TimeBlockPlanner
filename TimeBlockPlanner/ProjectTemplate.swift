@@ -41,7 +41,7 @@ struct EmptyProject: View {
             
             // Defining subtasks
             ZStack {
-                Rectangle().fill(Color.gray)
+                Rectangle().fill(Color.white)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30)
                     .cornerRadius(10).shadow(color: .gray, radius: 4).padding(20)
                 
@@ -55,15 +55,15 @@ struct EmptyProject: View {
                         }
                         
                     } label:{
-                        Image(systemName: "plus").resizable()
+                        Image(systemName: "plus").resizable().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
 
-                    }.padding(25).opacity(0.4)
+                    }.padding(25).opacity(1.0)
                     
                     
                     
                     VStack (alignment: .leading){
                         TextField("Add task",text: $subtask).font(.headline)
-                            .lineLimit(1).foregroundColor(.black).textFieldStyle(PlainTextFieldStyle())
+                            .lineLimit(1).colorScheme(.light).textFieldStyle(PlainTextFieldStyle())
 
                     }.padding(25)
                     Spacer()
