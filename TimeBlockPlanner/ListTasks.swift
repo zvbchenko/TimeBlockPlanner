@@ -18,12 +18,13 @@ struct Task: Identifiable {
 struct TaskRow: View {
     var task: Task
     //@State private var subtask: String =
-        
+    @State private var pic: String = "circle"
+    @State var isClicked : Bool = false
     var body: some View {
         
         
         ZStack {
-            Rectangle().fill(Color.gray)
+            Rectangle().fill(Color.white)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30)
                 .cornerRadius(10).shadow(color: .gray, radius: 4).padding(20)
             
@@ -33,11 +34,13 @@ struct TaskRow: View {
                 
                 Button{
                     
+                    self.isClicked.toggle()
                     
                 } label:{
-                    Image(systemName: "checkmark.square.fill").resizable().opacity(0.8)
+                    
+                    Image(systemName: self.isClicked == true ? "checkmark.circle.fill" : "circle").resizable().opacity(1.0).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).colorScheme(.light)
 
-                }.padding(25).opacity(0.4)
+                }.padding(25).opacity(1.0)
                 
                 
                 
