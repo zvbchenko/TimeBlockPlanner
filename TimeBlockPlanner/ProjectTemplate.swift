@@ -12,8 +12,12 @@ struct EmptyProject: View {
     @State private var projectName: String = ""
     @State private var subtask: String = ""
     @State private var dueDate = Date()
-
-   
+    @State var tasks = [
+        Task(description: "T1", complete: false),
+        Task(description: "T2", complete: false),
+        Task(description: "T3", complete: false)
+    ]
+    
     var body: some View {
 
         VStack(alignment: .center){
@@ -36,13 +40,10 @@ struct EmptyProject: View {
             // View for holding a list of tasks
             
             
-            ListTasks()
-            
-
-            
-            
-            
-            
+            ForEach(tasks) { task in
+                TaskRow(task: task)
+                
+            }
             //
             
             // Defining subtasks
@@ -57,7 +58,7 @@ struct EmptyProject: View {
                     
                     Button{
                         if !subtask.isEmpty{
-                           // push onto the list of tasks
+                            tasks.append(Task(description: subtask, complete: false))
                         }
                         
                     } label:{

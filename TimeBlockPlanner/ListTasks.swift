@@ -58,8 +58,9 @@ struct TaskRow: View {
         
     }
 }
+/*
 struct ListTasks: View {
-    let tasks = [
+    @State var tasks = [
         Task(description: "T1", complete: false),
         Task(description: "T2", complete: false),
         Task(description: "T3", complete: false)
@@ -77,6 +78,11 @@ struct ListTasks: View {
         
         
     }
+    public func addTask(task : Task) {
+        tasks.append(task)
+        print(tasks)
+    }
+
     
 }
 
@@ -85,3 +91,4 @@ struct ListTasks_Previews: PreviewProvider {
         ListTasks()
     }
 }
+*/
