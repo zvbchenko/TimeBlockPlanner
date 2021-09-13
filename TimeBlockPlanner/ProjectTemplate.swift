@@ -12,6 +12,7 @@ struct EmptyProject: View {
     @State private var projectName: String = ""
     @State private var subtask: String = ""
     @State private var dueDate = Date()
+
    
     var body: some View {
 
@@ -34,7 +35,12 @@ struct EmptyProject: View {
             */
             // View for holding a list of tasks
             
+            
             ListTasks()
+            
+
+            
+            
             
             
             //

@@ -21,8 +21,7 @@ struct TaskRow: View {
     @State private var pic: String = "circle"
     @State var isClicked : Bool = false
     var body: some View {
-        
-        
+    
         ZStack {
             Rectangle().fill(Color.white)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30)
@@ -54,7 +53,7 @@ struct TaskRow: View {
             }
             )
             
-        }
+        }.padding(.vertical, -18)
         
         
     }
@@ -67,11 +66,18 @@ struct ListTasks: View {
     ]
     
     
+    
     var body: some View {
-        List(tasks) { task in
-                    TaskRow(task: task)
-                }
+        
+            ForEach(tasks) { task in
+                TaskRow(task: task)
+                
+            }
+            
+        
+        
     }
+    
 }
 
 struct ListTasks_Previews: PreviewProvider {
