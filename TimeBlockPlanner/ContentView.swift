@@ -24,7 +24,7 @@ struct ContentView: View {
                     ScheduleView().frame(minWidth: 50, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                 }
                             
-            }.multilineTextAlignment(.center)
+            }
             
         }.frame(minWidth: 600, maxWidth: .infinity, minHeight: 400, maxHeight: .infinity).toolbar{
             ToolbarItem(placement: .navigation) {

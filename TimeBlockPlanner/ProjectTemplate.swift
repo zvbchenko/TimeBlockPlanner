@@ -15,11 +15,11 @@ struct EmptyProject: View {
    
     var body: some View {
 
-        VStack{
+        VStack(alignment: .center){
             // Title of the project
             
             TextField("Untitled Project",
-                              text: $projectName).textFieldStyle(PlainTextFieldStyle()).font(Font.system(size: 30, design: .default))
+                      text: $projectName).textFieldStyle(PlainTextFieldStyle()).font(Font.system(size: 30, design: .default)).padding(20)
             
             DatePicker(
                     "Due Date:",
@@ -29,8 +29,15 @@ struct EmptyProject: View {
             ).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
             
             
-            
+            /*
             Subtask().textFieldStyle(PlainTextFieldStyle()).font(Font.system(size: 10, design: .default))
+            */
+            // View for holding a list of tasks
+            
+            ListTasks()
+            
+            
+            //
             
             // Defining subtasks
             ZStack {
@@ -41,18 +48,24 @@ struct EmptyProject: View {
                 HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: nil, content:
                 {
                     // "add" button
-                    Image(systemName: "plus")
-                        .resizable()
-                        .padding(6)
-                        .frame(width: 24, height: 24)
-                        .clipShape(Circle())
-                        .foregroundColor(.black).padding(25)
+                    
+                    Button{
+                        if !subtask.isEmpty{
+                           // push onto the list of tasks
+                        }
+                        
+                    } label:{
+                        Image(systemName: "plus").resizable()
+
+                    }.padding(25).opacity(0.4)
+                    
+                    
                     
                     VStack (alignment: .leading){
                         TextField("Add task",text: $subtask).font(.headline)
                             .lineLimit(1).foregroundColor(.black).textFieldStyle(PlainTextFieldStyle())
 
-                    }.padding(30)
+                    }.padding(25)
                     Spacer()
             
                 }
