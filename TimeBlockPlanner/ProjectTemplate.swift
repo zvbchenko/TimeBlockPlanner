@@ -17,6 +17,7 @@ struct EmptyProject: View {
         Task(description: "T2", complete: false),
         Task(description: "T3", complete: false)
     ]
+    @State private var isEditing = false
     
     var body: some View {
 
@@ -69,7 +70,14 @@ struct EmptyProject: View {
                     
                     
                     VStack (alignment: .leading){
-                        TextField("Add task",text: $subtask).font(.headline)
+                        TextField("Add task",text: $subtask){ isEditing in
+                            self.isEditing = isEditing
+                        } onCommit: {
+                            if !subtask.isEmpty{
+                                tasks.append(Task(description: subtask, complete: false))
+                            }
+
+                        }.font(.headline)
                             .lineLimit(1).colorScheme(.light).textFieldStyle(PlainTextFieldStyle())
 
                     }.padding(25)
