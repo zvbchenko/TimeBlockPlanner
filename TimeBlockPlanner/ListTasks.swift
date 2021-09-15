@@ -95,7 +95,10 @@ struct ListCompleteTasks: View {
     var body: some View {
             if taskview.completedTasks.count != 0 {
                 
-                Text("Completed")
+                Text("Completed").foregroundColor(.white)
+                    .padding(EdgeInsets(top: 5, leading: 20, bottom: 5, trailing: 20))
+                    .background(Color.green)
+                    .clipShape(Capsule())
                 
                 ForEach(taskview.completedTasks) { task in
                     ZStack {
@@ -108,7 +111,7 @@ struct ListCompleteTasks: View {
                                 // self.isClicked.toggle()
                                 //task.complete = false
                                guard let index = self.taskview.completedTasks.firstIndex(of: task) else { return }
-                             
+                               self.taskview.tasks.append( taskview.completedTasks[index])
                                self.taskview.completedTasks.remove(at: index)
 
                             } label:{
@@ -119,6 +122,14 @@ struct ListCompleteTasks: View {
                                     .lineLimit(1).foregroundColor(.black).textFieldStyle(PlainTextFieldStyle())
                             }.padding(25)
                             Spacer()
+                            
+                            Button{
+                               guard let index = self.taskview.completedTasks.firstIndex(of: task) else { return }
+                               self.taskview.completedTasks.remove(at: index)
+
+                            } label:{
+                                Image(systemName: "trash.circle.fill").resizable().opacity(1.0).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).colorScheme(.light)
+                            }.padding(25).opacity(1.0)
                         }
                         )
                     }.padding(.vertical, -18)
