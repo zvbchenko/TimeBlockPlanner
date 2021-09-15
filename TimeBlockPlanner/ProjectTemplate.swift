@@ -43,8 +43,10 @@ struct EmptyProject: View {
             
             
             // View for holding a list of tasks
-            ListTasks(taskview: taskViewModel)
-            ListCompleteTasks(taskview: taskViewModel)
+            List{
+                ListTasks(taskview: taskViewModel)
+                ListCompleteTasks(taskview: taskViewModel)
+            }.cornerRadius(15)
             // Defining subtasks
             ZStack {
                 Rectangle().fill(Color.white)
@@ -72,6 +74,7 @@ struct EmptyProject: View {
                         } onCommit: {
                             if !subtask.isEmpty{
                                 taskViewModel.tasks.append(Task(description: subtask, complete: false))
+                                subtask = ""
                             }
                         }.font(.headline)
                             .lineLimit(1).colorScheme(.light).textFieldStyle(PlainTextFieldStyle())
