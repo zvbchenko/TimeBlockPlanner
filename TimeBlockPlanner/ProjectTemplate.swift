@@ -7,16 +7,23 @@
 
 import SwiftUI
 
+class TasksViewModel: ObservableObject{
+    @Published var tasks : [Task] = [
+        Task(description: "T1", complete: false),
+        Task(description: "T2", complete: false),
+        Task(description: "T3", complete: false)
+    ]
+    @Published var completedTasks : [Task] = []
+    
+}
+
 
 struct EmptyProject: View {
     @State private var projectName: String = ""
     @State private var subtask: String = ""
     @State private var dueDate = Date()
-    @State var tasks = [
-        Task(description: "T1", complete: false),
-        Task(description: "T2", complete: false),
-        Task(description: "T3", complete: false)
-    ]
+    @StateObject var taskViewModel = TasksViewModel()
+    
     @State private var isEditing = false
     
     var body: some View {
@@ -35,18 +42,9 @@ struct EmptyProject: View {
             ).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
             
             
-            /*
-            Subtask().textFieldStyle(PlainTextFieldStyle()).font(Font.system(size: 10, design: .default))
-            */
             // View for holding a list of tasks
-            
-            
-            ForEach(tasks) { task in
-                TaskRow(task: task)
-                
-            }
-            //
-            
+            ListTasks(taskview: taskViewModel)
+
             // Defining subtasks
             ZStack {
                 Rectangle().fill(Color.white)
@@ -56,15 +54,14 @@ struct EmptyProject: View {
                 HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: nil, content:
                 {
                     // "add" button
-                    
                     Button{
                         if !subtask.isEmpty{
-                            tasks.append(Task(description: subtask, complete: false))
+                            taskViewModel.tasks.append(Task(description: subtask, complete: false))
                         }
                         
                     } label:{
                         Image(systemName: "plus").resizable().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-
+                        
                     }.padding(25).opacity(1.0)
                     
                     
@@ -74,9 +71,8 @@ struct EmptyProject: View {
                             self.isEditing = isEditing
                         } onCommit: {
                             if !subtask.isEmpty{
-                                tasks.append(Task(description: subtask, complete: false))
+                                taskViewModel.tasks.append(Task(description: subtask, complete: false))
                             }
-
                         }.font(.headline)
                             .lineLimit(1).colorScheme(.light).textFieldStyle(PlainTextFieldStyle())
 
