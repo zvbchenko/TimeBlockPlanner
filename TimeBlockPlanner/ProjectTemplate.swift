@@ -44,7 +44,7 @@ struct EmptyProject: View {
             
             // View for holding a list of tasks
             ListTasks(taskview: taskViewModel)
-
+            ListCompleteTasks(taskview: taskViewModel)
             // Defining subtasks
             ZStack {
                 Rectangle().fill(Color.white)

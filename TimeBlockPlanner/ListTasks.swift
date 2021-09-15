@@ -77,7 +77,22 @@ struct ListTasks: View {
                 }
                 )
             }.padding(.vertical, -18)
-            
+                   
+            }
+                
+        
+    }
+
+}
+
+
+
+struct ListCompleteTasks: View {
+    @ObservedObject var taskview : TasksViewModel
+    
+    
+    @State var isClicked : Bool = false
+    var body: some View {
             if taskview.completedTasks.count != 0 {
                 
                 Text("Completed")
@@ -113,19 +128,11 @@ struct ListTasks: View {
                 
                 
             }
-            
-            
-                            
-                
             }
-            
-        
-        
-    }
+}
 
 
     
-}
 /*
 struct ListTasks_Previews: PreviewProvider {
     static var previews: some View {
