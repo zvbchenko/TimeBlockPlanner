@@ -16,7 +16,7 @@ struct ContentView: View {
         
         NavigationView{
             
-            ProjectListView()
+            ProjectListView(showSchedule:$showSchedule)
             HStack{
                 MainView().offset(y: 120)
                 if showSchedule{
@@ -62,21 +62,50 @@ struct MainView: View{
     var body:some View{
         //Text("project description/Todo tasks")
         EmptyProject().padding().offset(y:-100)
+        
+        
     }
 }
 
+
+
+
+struct CreateEmptyProject:View{
+    @Binding var showSchedule : Bool
+    
+    var body:some View{
+        //Text("project description/Todo tasks")
+        HStack{
+            MainView().offset(y: 120)
+            if showSchedule{
+                Divider()
+                ScheduleView().frame(minWidth: 50, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            }
+                        
+        }
+    }
+    
+    
+}
+
 struct ProjectListView: View{
+    @Binding var showSchedule : Bool
     var body:some View{
         VStack(alignment: .center,
                spacing: 10){
+            NavigationLink(destination: CreateEmptyProject(showSchedule: $showSchedule).padding()) {
+                Text("New Project/Assignment")
+            }.padding().frame(height: 50)
             
-            Text("projectlist").padding()
             Divider()
-            ForEach(1...5,
-                        id: \.self
-                    ) {
-                        Text("Item \($0)")
+            List{
+                ForEach(1...100,
+                            id: \.self
+                        ) {
+                            Text("Item \($0)")
+                }
             }
+
             Spacer()
                }.padding().offset(y:-10)
         

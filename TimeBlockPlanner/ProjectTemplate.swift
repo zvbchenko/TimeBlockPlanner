@@ -46,7 +46,7 @@ struct EmptyProject: View {
             List{
                 ListTasks(taskview: taskViewModel)
                 ListCompleteTasks(taskview: taskViewModel)
-            }.cornerRadius(15)
+            }.cornerRadius(15)   
             // Defining subtasks
             ZStack {
                 Rectangle().fill(Color.white)
