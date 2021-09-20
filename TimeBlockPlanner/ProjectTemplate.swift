@@ -30,9 +30,23 @@ struct EmptyProject: View {
 
         VStack(alignment: .center){
             // Title of the project
-            
+            HStack{
+                
             TextField("Untitled Project",
                       text: $projectName).textFieldStyle(PlainTextFieldStyle()).font(Font.system(size: 30, design: .default)).padding(20)
+                
+                
+                Button{
+                    if !subtask.isEmpty{
+                        taskViewModel.tasks.append(Task(description: subtask, complete: false))
+                    }
+                    
+                } label:{
+                    Image(systemName: "plus.rectangle.fill").resizable().foregroundColor(.blue).edgesIgnoringSafeArea(.all).imageScale(.large)
+                    
+                }.opacity(1.0)
+                
+            }
             
             DatePicker(
                     "Due Date:",

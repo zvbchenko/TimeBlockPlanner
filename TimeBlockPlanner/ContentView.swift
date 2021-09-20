@@ -87,11 +87,12 @@ struct CreateEmptyProject:View{
 }
 
 
+
 struct ToDoToday:View{
     @Binding var showSchedule: Bool
     var body:some View{
         HStack{
-            ToDoList().offset(y: 120)
+            ToDoList().offset(y: 0)
             if showSchedule{
                 Divider()
                 ScheduleView().frame(minWidth: 50, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
@@ -107,13 +108,13 @@ struct ProjectListView: View{
     @Binding var showSchedule : Bool
     var body:some View{
         VStack(alignment: .center,
-               spacing: 10){
+               spacing: 0){
             NavigationLink(destination: ToDoToday(showSchedule: $showSchedule).padding()) {
-                Text("New Project/Assignment")
-            }.padding().frame(height: 50)
+                Text("To-Do")
+            }.buttonStyle(BorderlessButtonStyle())
             NavigationLink(destination: CreateEmptyProject(showSchedule: $showSchedule).padding()) {
                 Text("New Project/Assignment")
-            }.padding().frame(height: 50)
+            }.buttonStyle(BorderlessButtonStyle()).padding()
             
             Divider()
             List{

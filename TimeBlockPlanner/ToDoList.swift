@@ -29,14 +29,13 @@ struct ToDoList: View {
     
     var body: some View {
 
-        VStack(alignment: .center){
+        VStack(alignment: .leading){
             // Title of the project
             
-            Text("To-Do").textFieldStyle(PlainTextFieldStyle()).font(Font.system(size: 30, design: .default)).padding(20)
+            Text("New Tasks/Assignments To Plan").textFieldStyle(PlainTextFieldStyle()).font(Font.system(size: 20, design: .default)).padding(20)
             
             
-            Text(createFormatter()).frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-            
+            Text(createFormatter()).frame(width: 100, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
             
             // View for holding a list of tasks
             List{
@@ -82,13 +81,11 @@ struct ToDoList: View {
                 )
                 
             }
-                
             Text("Project Plan:")
             Text("List of subtasks")
-            
             Spacer() // Has to be last
             
-        }.frame( alignment: .top)
+        }.frame( alignment: .center)
             
             
             

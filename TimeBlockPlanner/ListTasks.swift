@@ -19,6 +19,7 @@ struct TaskRow: View {
     @State var task: Task
     
     @State var isClicked : Bool = false
+    
     var body: some View {
     
         ZStack {
@@ -52,6 +53,7 @@ struct ListTasks: View {
     
     
     @State var isClicked : Bool = false
+    @State var draggedTask : Task?
     var body: some View {
         
         ForEach(taskview.tasks) { task in
@@ -84,6 +86,7 @@ struct ListTasks: View {
     }
 
 }
+
 
 
 
@@ -142,12 +145,3 @@ struct ListCompleteTasks: View {
             }
 }
 
-
-    
-/*
-struct ListTasks_Previews: PreviewProvider {
-    static var previews: some View {
-        ListTasks()
-    }
-}
-*/
