@@ -90,9 +90,27 @@ struct CreateEmptyProject:View{
 
 struct ToDoToday:View{
     @Binding var showSchedule: Bool
+    
+    @State var projects = ["A", "B", "C", "D"]
+    @State private var dragging: String?
     var body:some View{
         HStack{
             ToDoList().offset(y: 0)
+            Divider()
+            
+            // make a draggable list here
+            List{
+                ForEach(projects,
+                            id: \.self
+                        ) { project in
+                    Text("Item \(project)").onDrag{
+                        self.dragging = project
+                        return NSItemProvider(object: project as NSString)
+                        
+                    }.onDrop(of: ["public.text"], delegate: MyDropDelegate(item: project, listData: $projects, current: $dragging))
+                }
+            }
+            
             if showSchedule{
                 Divider()
                 ScheduleView().frame(minWidth: 50, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
@@ -101,6 +119,33 @@ struct ToDoToday:View{
         }
         
         
+    }
+}
+
+
+struct MyDropDelegate: DropDelegate {
+    let item: String
+    @Binding var listData: [String]
+    @Binding var current: String?
+    
+    func dropEntered(info: DropInfo) {
+        if item != current {
+              let from = listData.firstIndex(of: current!)!
+              let to = listData.firstIndex(of: item)!
+              if listData[to] != current! {
+                  listData.move(fromOffsets: IndexSet(integer: from),
+                      toOffset: to > from ? to + 1 : to)
+              }
+    }
+    }
+    func dropUpdated(info: DropInfo) -> DropProposal? {
+        return DropProposal(operation: .move)
+    }
+
+
+    func performDrop(info: DropInfo) -> Bool {
+        self.current = nil
+        return true
     }
 }
 
