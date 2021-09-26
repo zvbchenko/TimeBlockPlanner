@@ -87,25 +87,31 @@ struct CreateEmptyProject:View{
 }
 
 
+struct Project: Identifiable, Equatable, Hashable  {
+    var id = UUID()
+    var name: String
+}
+
+
+
 
 struct ToDoToday:View{
     @Binding var showSchedule: Bool
     
-    @State var projects = ["A", "B", "C", "D"]
-    @State private var dragging: String?
+    @State var projects = [Project(name: "A"), Project(name: "B"), Project(name: "C"), Project(name: "D")]
+    @State private var dragging: Project?
     var body:some View{
         HStack{
             ToDoList().offset(y: 0)
             Divider()
-            
             // make a draggable list here
             List{
                 ForEach(projects,
                             id: \.self
                         ) { project in
-                    Text("Item \(project)").onDrag{
+                    project_item( project: project).onDrag{
                         self.dragging = project
-                        return NSItemProvider(object: project as NSString)
+                        return NSItemProvider(object: project.name as NSString)
                         
                     }.onDrop(of: ["public.text"], delegate: MyDropDelegate(item: project, listData: $projects, current: $dragging))
                 }
@@ -120,13 +126,54 @@ struct ToDoToday:View{
         
         
     }
+    
+    
+    
+
+}
+
+struct project_item: View{
+    
+    @State var project: Project
+    
+    @State var isClicked : Bool = false
+    
+    var body: some View {
+    
+        ZStack {
+            Rectangle().fill(Color.white)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30)
+                .cornerRadius(10).shadow(color: .gray, radius: 4).padding(20)
+            HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: nil, content:
+            {
+                Button{
+                    self.isClicked.toggle()
+
+                } label:{
+                    Image(systemName: self.isClicked == true ? "checkmark.circle.fill" : "circle").resizable().opacity(1.0).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).colorScheme(.light)
+                }.padding(25).opacity(1.0)
+                VStack (alignment: .leading){
+                    Text("\(project.name)").font(.headline)
+                        .lineLimit(1).foregroundColor(.black).textFieldStyle(PlainTextFieldStyle())
+                }.padding(25)
+                Spacer()
+            }
+            )
+        }.padding(.vertical, -18)
+        
+        
+    }
 }
 
 
+
+
+
+
 struct MyDropDelegate: DropDelegate {
-    let item: String
-    @Binding var listData: [String]
-    @Binding var current: String?
+    let item: Project
+    @Binding var listData: [Project]
+    @Binding var current: Project?
     
     func dropEntered(info: DropInfo) {
         if item != current {
