@@ -55,7 +55,7 @@ private func toggleSidebar() {
 
 struct ScheduleView: View{
     var body:some View{
-        Text("schedule")
+        DaySchedule()
     }
 }
 struct MainView: View{
@@ -126,10 +126,6 @@ struct ToDoToday:View{
         
         
     }
-    
-    
-    
-
 }
 
 struct project_item: View{
